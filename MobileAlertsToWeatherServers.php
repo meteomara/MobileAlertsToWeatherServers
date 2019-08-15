@@ -134,7 +134,7 @@ if ($cwopid != "") {
 	$date_cwop = date('dHi', $dtg)."z"."5231.90N/01325.60E_";
 
 	$cwop = $cwopid.'>APRS,TCPIP*:@'.$date_cwop;
-	$cwop .= sprintf("%03d",$dd);
+#	$cwop .= sprintf("%03d",$dd);
 #	$cwop .= sprintf("/%03.0f",$ff_wu); # mph
 #	$cwop .= sprintf("g%03.0f",$ffg_wu); # mph
 	$cwop .= sprintf("t%03.0f",$tt_wu); # °F
