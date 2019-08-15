@@ -1,7 +1,5 @@
 # MobileAlertsToWeatherServers V0.1
 
-##
-
 Gets data from https://measurements.mobile-alerts.eu
 and sends them to:
   - WeatherCloud.net
