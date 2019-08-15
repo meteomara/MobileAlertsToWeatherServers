@@ -16,7 +16,7 @@ in UTC (can be configured via App).
 
 If you are interested in more sensor support, 
 please contact Marco Radke-Fretz, 
-marco@wetter-center.de.
+marco (at) wetter-center.de.
 
 More Info, see also: https://github.com/sarnau/MMMMobileAlerts
 
