@@ -89,7 +89,6 @@ while (!feof($dataFile)) {
 	} elseif ($mode==2) {
 		if (preg_match ( "/(-?\d+),(\d)/", $line, $treffer )) {
 			$tt = $treffer[1].".".$treffer[2];
-			$tt = $tt - 0.5; # correction due to location
 			if ($dryrun==1) { echo "<br>TT=$tt";}
 			continue;
 		}
