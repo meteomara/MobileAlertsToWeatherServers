@@ -132,7 +132,8 @@ $td_wu = sprintf("%.1f",32.+(1.8*$td)); # °F
 #	$ffg_wu = round(22.37*$ffg_wa)/10; # m/s -> mph
 #	$rr_wu = $rr1 * 0.0394; # hourly precipitation in inch
 #	$rr24_wu = $rr24 * 0.0394; # 24-hourly precipitation in inch
-
+$dd=0;
+$ff_wu=0;
 
 if ($cwopid != "") {
 
@@ -140,7 +141,7 @@ if ($cwopid != "") {
 
 	$cwop = $cwopid.'>APRS,TCPIP*:@'.$date_cwop;
 	$cwop .= sprintf("%03d",$dd);
-#	$cwop .= sprintf("/%03.0f",$ff_wu); # mph
+	$cwop .= sprintf("/%03.0f",$ff_wu); # mph
 #	$cwop .= sprintf("g%03.0f",$ffg_wu); # mph
 	$cwop .= sprintf("t%03.0f",$tt_wu); # °F
 #	$cwop .= sprintf("r%03.0f",$rr_wu*100); # inch (last 1h)
