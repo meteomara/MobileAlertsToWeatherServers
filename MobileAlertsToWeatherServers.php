@@ -16,12 +16,17 @@ $wc_key = "<your WeatherCloud secret key>";
 # Your CWOP account
 # leave empty if none exists
 $cwopid = "<your CWOP ID>";
+# Station Co-ordinates
+# Example: 52°31.9'N 13°25.6'E
+$cwopco = "5231.90N/01325.60E";
 
 # Your Weather Underground account
 # leave empty if none exists
 $wu_id = "<your Wunderground station ID>";
 $wu_pw = "<your Wunderground password>";
 
+
+#######################################################
 
 
 # Test mode
@@ -89,6 +94,7 @@ while (!feof($dataFile)) {
 	} elseif ($mode==2) {
 		if (preg_match ( "/(-?\d+),(\d)/", $line, $treffer )) {
 			$tt = $treffer[1].".".$treffer[2];
+			$tt = $tt - 0.5; # correction due to location
 			if ($dryrun==1) { echo "<br>TT=$tt";}
 			continue;
 		}
@@ -130,10 +136,10 @@ $td_wu = sprintf("%.1f",32.+(1.8*$td)); # °F
 
 if ($cwopid != "") {
 
-	$date_cwop = date('dHi', $dtg)."z"."5231.90N/01325.60E_";
+	$date_cwop = date('dHi', $dtg)."z".$cwopco."_";
 
 	$cwop = $cwopid.'>APRS,TCPIP*:@'.$date_cwop;
-#	$cwop .= sprintf("%03d",$dd);
+	$cwop .= sprintf("%03d",$dd);
 #	$cwop .= sprintf("/%03.0f",$ff_wu); # mph
 #	$cwop .= sprintf("g%03.0f",$ffg_wu); # mph
 	$cwop .= sprintf("t%03.0f",$tt_wu); # °F
