@@ -7,6 +7,7 @@
 # Mobile Alerts account
 $phoneid = "<your phone ID>";
 $sensorid = "<sensor ID for outdoor temperature and humidity>";
+$sensoridw = "<sensor ID for wind>"; 
 
 # Timezone of Mobile Alerts System
 $timezone = "Europe/Berlin";
@@ -18,14 +19,14 @@ $wc_key = "<your WeatherCloud secret key>";
 
 # Your CWOP account
 # leave empty if none exists
-$cwopid = "<your CWOP ID>";
+$cwopid = "<your CWOP ID>"; # set to empty string, if no account exists
 # Station Co-ordinates
 # Example: 52°31.9'N 13°25.6'E
 $cwopco = "5231.90N/01325.60E";
 
 # Your Weather Underground account
 # leave empty if none exists
-$wu_id = "<your Wunderground station ID>";
+$wu_id = "<your Wunderground station ID>"; # set to empty string, if no account exists
 $wu_pw = "<your Wunderground password>";
 
 
