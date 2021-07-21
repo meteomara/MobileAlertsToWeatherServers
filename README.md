@@ -1,4 +1,4 @@
-# MobileAlertsToWeatherServers V0.1
+# MobileAlertsToWeatherServers V0.2
 
 Gets data from https://measurements.mobile-alerts.eu
 and sends them to:
